@@ -43,7 +43,7 @@ struct LandmarkDetail: View {
                                 .font(.title)
                                 .foregroundColor(.primary)
                             FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
-                                .buttonStyle(PlainButtonStyle())
+//                                .buttonStyle(PlainButtonStyle()) // SwiftUI defect: PlainButtonStyle() will reset FocusValues and thus disable Landmark command
                         }
                         
                         VStack(alignment: .leading) {
@@ -66,7 +66,6 @@ struct LandmarkDetail: View {
             .offset(y: -50)
         }
         .navigationTitle(landmark.name)
-        .focusedValue(\.selectedLandmark, $modelData.landmarks[landmarkIndex])
     }
 }
 

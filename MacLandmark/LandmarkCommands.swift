@@ -36,7 +36,6 @@ private struct SelectedLandmarkKey: FocusedValueKey {
 extension FocusedValues {
     var selectedLandmark: Binding<Landmark>? {
         get { self[SelectedLandmarkKey.self] }
-        set {
-            self[SelectedLandmarkKey.self] = newValue }
+        set { self[SelectedLandmarkKey.self] = newValue }
     }
 }
